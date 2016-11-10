@@ -1,0 +1,61 @@
+.vote_button {
+  background: #3d2c2c;
+  background-image: -webkit-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -moz-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -ms-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -o-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: linear-gradient(to bottom, #3d2c2c, #f01a1a);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.vote_button:hover {
+  background: #151617;
+  background-image: -webkit-linear-gradient(top, #151617, #3498db);
+  background-image: -moz-linear-gradient(top, #151617, #3498db);
+  background-image: -ms-linear-gradient(top, #151617, #3498db);
+  background-image: -o-linear-gradient(top, #151617, #3498db);
+  background-image: linear-gradient(to bottom, #151617, #3498db);
+  text-decoration: none;
+}
+
+body {
+    overflow:hidden;
+    background-image: url('obama_awesome.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover
+}
+
+.downvote_button {
+  background: #3d2c2c;
+  background-image: -webkit-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -moz-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -ms-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: -o-linear-gradient(top, #3d2c2c, #f01a1a);
+  background-image: linear-gradient(to bottom, #3d2c2c, #f01a1a);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.downvote_button {
+  background: #151617;
+  background-image: -webkit-linear-gradient(top, #151617, #3498db);
+  background-image: -moz-linear-gradient(top, #151617, #3498db);
+  background-image: -ms-linear-gradient(top, #151617, #3498db);
+  background-image: -o-linear-gradient(top, #151617, #3498db);
+  background-image: linear-gradient(to bottom, #151617, #3498db);
+  text-decoration: none;
+}
