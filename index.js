@@ -13,13 +13,13 @@ router.get('/comments', function(req, res, next) {
 
 router.post('/comments', function(req, res, next) {
   var comment = new Comment(req.body);
-  Comment.find({title: comment.title}, function(err, results)
+  /*Comment.find({title: comment.title}, function(err, results)
   {
     if(results != [])
     {
 
     }
-  })
+  })*/
   comment.save(function(err, comment){
     if(err){ return next(err); }
     res.json(comment);

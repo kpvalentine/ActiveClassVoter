@@ -2,7 +2,7 @@
 <head>
   <title>Vote for CS Overlord</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="javascripts/app.js"></script>
 
@@ -10,25 +10,37 @@
 </head>
 <body ng-app="comment" ng-controller="MainCtrl">
 <div class="row">
-<div class="col-md-6 col-md-offset-3">
-<div class="page-header">
-  <h1>Comments </h1>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="page-header">
+      <h1 class ="headline">Vote For Your Overlord
+
+      <p class ="subheadline"> 
+      You can make a difference--any candidate below 0 votes will be eliminated. </p>
+      </h1>
+    </div>
+
+    <form ng-submit="addComment()" style = "margin-top30px;">
+      <input type="text" ng-model="formContent" placeholder="Nominee Image Link"></input>
+      <button type="submit" class="addButton" >Add Nominee</button>
+    </form>
+    <div class="candidates">
+        <div ng-repeat="comment in comments | orderBy: '-upvotes'">
+          <button class="downvote_button" ng-click="decrementUpvotes(comment)">Never!</button>
+          <button class="vote_button" ng-click="incrementUpvotes(comment)">Yes!</button> 
+          <button class="vote_number">{{comment.upvotes}} </button>
+          <img src={{comment.title}} class="candidate_pic" height="300" width="400" margin = "10px">  
+        </div>
+    </div>
+
+
+
+
+
+  </div>
 </div>
 
-  <form ng-submit="addComment()" style = "margin-top30px;">
-    <input type="text" ng-model="formContent"></input>
-    <button type="submit">Add Comment</button>
-  </form>
-  <div>
-    {{test}}
-  </div>
-  <div ng-repeat="comment in comments | orderBy: '-upvotes'">
-  <button class="downvote_button" ng-click="delete(comment)">Never!</button>
-    <button class="vote_button" ng-click="incrementUpvotes(comment)">Yes!</button>
-    {{comment.title}} - upvotes: {{comment.upvotes}}
-  </div>
-
-</div>
-</div>
+<!--<div id="banner">banner</div>
+    What are you doing?
+</div>-->
 </body>
 </html>
